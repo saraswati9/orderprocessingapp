@@ -20,8 +20,10 @@ public class OrderProcessingController {
     @PostMapping("/{productName}")
     public PackingSlip createPackingSlip(@RequestBody Payment payment, @PathVariable String productName) {
         if (productName.equalsIgnoreCase("physical product")) {
+            ops.makeCommissionPaymentToAgent(productName);
             return ops.createPackingSlip(payment, productName);
         } else if (productName.equalsIgnoreCase("book")) {
+            ops.makeCommissionPaymentToAgent(productName);
             return ops.getDuplicatePackingSlip();
         } else {
             return ops.createPackingSlip(payment, productName);
@@ -31,11 +33,13 @@ public class OrderProcessingController {
     @PutMapping("/activate")
     public void activateMembership(@PathVariable String activate) {
         ops.activateMembership();
+        ops.sendEmail("Your membership got activated");
     }
 
     @PutMapping("/upgradeToMembership")
     public void upgradeToMembership() {
         ops.upgradeToMembership();
+        ops.sendEmail("Upgraded to membership");
     }
 
     @PostMapping("/video/{videoName}")

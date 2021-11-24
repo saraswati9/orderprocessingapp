@@ -54,6 +54,16 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     }
 
     @Override
+    public Double getAgentCommissionByProductName(String productName) {
+        return null;
+    }
+
+    @Override
+    public void makeCommissionPaymentToAgent(Double commission) {
+
+    }
+
+    @Override
     public Object save(Object entity) {
         return null;
     }

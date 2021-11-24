@@ -42,4 +42,12 @@ public class OrderProcessingService {
     public Product getProductByName(String videoName) {
         return opr.getProductByName(videoName);
     }
+
+    public void makeCommissionPaymentToAgent(String productName) {
+        Double commission = opr.getAgentCommissionByProductName(productName);
+        opr.makeCommissionPaymentToAgent(commission);
+    }
+
+    public void sendEmail(String your_membership_got_activated) {
+    }
 }

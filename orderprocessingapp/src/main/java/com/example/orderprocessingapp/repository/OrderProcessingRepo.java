@@ -23,4 +23,8 @@ public interface OrderProcessingRepo extends JpaRepository {
     PackingSlip createPackingSlipForVideo(Payment payment, List<Product> productList);
 
     Product getProductByName(String videoName);
+
+    Double getAgentCommissionByProductName(String productName);
+
+    void makeCommissionPaymentToAgent(Double commission);
 }
