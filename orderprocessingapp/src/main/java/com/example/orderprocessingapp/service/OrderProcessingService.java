@@ -2,9 +2,12 @@ package com.example.orderprocessingapp.service;
 
 import com.example.orderprocessingapp.model.PackingSlip;
 import com.example.orderprocessingapp.model.Payment;
+import com.example.orderprocessingapp.model.Product;
 import com.example.orderprocessingapp.repository.OrderProcessingRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OrderProcessingService {
@@ -25,10 +28,14 @@ public class OrderProcessingService {
     }
 
     public boolean activateMembership() {
-        return true;
+        return opr.activateMembership();
     }
 
     public boolean upgradeToMembership() {
-        return true;
+        return opr.upgradeToMembership();
+    }
+
+    public PackingSlip createPackingSlipForVideo(Payment payment, List<Product> productList) {
+        return opr.createPackingSlipForVideo(payment, productList);
     }
 }

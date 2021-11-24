@@ -2,6 +2,7 @@ package com.example.orderprocessingapp.impl;
 
 import com.example.orderprocessingapp.model.PackingSlip;
 import com.example.orderprocessingapp.model.Payment;
+import com.example.orderprocessingapp.model.Product;
 import com.example.orderprocessingapp.repository.OrderProcessingRepo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Example;
@@ -40,6 +41,11 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     @Override
     public boolean upgradeToMembership() {
         return true;
+    }
+
+    @Override
+    public PackingSlip createPackingSlipForVideo(Payment payment, List<Product> productList) {
+        return null;
     }
 
     @Override

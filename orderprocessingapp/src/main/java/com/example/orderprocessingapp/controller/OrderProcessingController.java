@@ -28,4 +28,9 @@ public class OrderProcessingController {
     public void activateMembership(@PathVariable String activate) {
         ops.activateMembership();
     }
+
+    @PutMapping("/upgradeToMembership")
+    public void upgradeToMembership() {
+        ops.upgradeToMembership();
+    }
 }

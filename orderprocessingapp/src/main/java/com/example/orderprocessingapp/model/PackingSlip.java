@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -33,4 +34,12 @@ public class PackingSlip {
         this.productPrice = product.getProductPrice();
     }
 
+    public PackingSlip(List<Product> productList) {
+        Double price = 0.0;
+        for(Product p : productList) {
+            Double d = p.getProductPrice();
+            price = price + d;
+        }
+        this.productPrice = price;
+    }
 }
