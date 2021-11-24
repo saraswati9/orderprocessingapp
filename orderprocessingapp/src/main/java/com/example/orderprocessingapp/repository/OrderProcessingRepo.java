@@ -13,5 +13,7 @@ public interface OrderProcessingRepo extends JpaRepository {
 
     PackingSlip getPackingSlipById(Long valueOf);
 
-    String activateMembership();
+    boolean activateMembership();
+
+    boolean upgradeToMembership();
 }

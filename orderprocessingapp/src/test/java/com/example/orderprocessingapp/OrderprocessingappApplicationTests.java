@@ -3,7 +3,6 @@ package com.example.orderprocessingapp;
 import com.example.orderprocessingapp.model.PackingSlip;
 import com.example.orderprocessingapp.model.Payment;
 import com.example.orderprocessingapp.model.Product;
-import com.example.orderprocessingapp.repository.OrderProcessingRepo;
 import com.example.orderprocessingapp.service.OrderProcessingService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -34,6 +33,13 @@ class OrderprocessingappApplicationTests {
     public void testActivateMembership() {
         when(ops.activateMembership()).thenReturn(true);
         assertEquals(true, ops.activateMembership());
+    }
+
+    @Test
+    public void testUpgradeToMembership() {
+        when(ops.upgradeToMembership()).thenReturn(true);
+        assertEquals(true, ops.upgradeToMembership());
+
     }
 
 

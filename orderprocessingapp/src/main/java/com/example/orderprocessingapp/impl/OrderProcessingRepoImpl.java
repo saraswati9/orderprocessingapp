@@ -33,8 +33,13 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     }
 
     @Override
-    public String activateMembership() {
-        return null;
+    public boolean activateMembership() {
+        return true;
+    }
+
+    @Override
+    public boolean upgradeToMembership() {
+        return true;
     }
 
     @Override

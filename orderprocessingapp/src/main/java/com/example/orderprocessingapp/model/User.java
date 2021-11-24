@@ -1,6 +1,8 @@
 package com.example.orderprocessingapp.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,6 +17,8 @@ public class User {
     private String userEmail;
     private Boolean activateFlag;
     private Boolean membershipFlag;
+
+
 
 
 }

@@ -23,4 +23,9 @@ public class OrderProcessingController {
             return ops.createPackingSlip(payment, productName);
         }
     }
+
+    @PutMapping("/activate")
+    public void activateMembership(@PathVariable String activate) {
+        ops.activateMembership();
+    }
 }

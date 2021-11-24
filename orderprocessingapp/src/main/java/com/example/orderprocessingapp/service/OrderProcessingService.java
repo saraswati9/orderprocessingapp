@@ -24,7 +24,11 @@ public class OrderProcessingService {
         return opr.getPackingSlipById(Long.valueOf(1L));
     }
 
-    public Boolean activateMembership() {
+    public boolean activateMembership() {
+        return true;
+    }
+
+    public boolean upgradeToMembership() {
         return true;
     }
 }
