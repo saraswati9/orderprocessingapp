@@ -33,6 +33,11 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     }
 
     @Override
+    public String activateMembership() {
+        return null;
+    }
+
+    @Override
     public Object save(Object entity) {
         return null;
     }

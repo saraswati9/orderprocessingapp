@@ -23,4 +23,8 @@ public class OrderProcessingService {
     public PackingSlip getDuplicatePackingSlip() {
         return opr.getPackingSlipById(Long.valueOf(1L));
     }
+
+    public Boolean activateMembership() {
+        return true;
+    }
 }

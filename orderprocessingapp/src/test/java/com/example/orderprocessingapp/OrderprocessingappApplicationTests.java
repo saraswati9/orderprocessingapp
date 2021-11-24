@@ -30,5 +30,11 @@ class OrderprocessingappApplicationTests {
         assertEquals(ps, ops.createPackingSlip(payment, "physical product"));
     }
 
+    @Test
+    public void testActivateMembership() {
+        when(ops.activateMembership()).thenReturn(true);
+        assertEquals(true, ops.activateMembership());
+    }
+
 
 }
