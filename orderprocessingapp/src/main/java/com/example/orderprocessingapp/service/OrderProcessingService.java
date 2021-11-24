@@ -38,4 +38,8 @@ public class OrderProcessingService {
     public PackingSlip createPackingSlipForVideo(Payment payment, List<Product> productList) {
         return opr.createPackingSlipForVideo(payment, productList);
     }
+
+    public Product getProductByName(String videoName) {
+        return opr.getProductByName(videoName);
+    }
 }

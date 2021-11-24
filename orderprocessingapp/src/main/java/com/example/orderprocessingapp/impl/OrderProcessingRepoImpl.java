@@ -49,6 +49,11 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     }
 
     @Override
+    public Product getProductByName(String videoName) {
+        return null;
+    }
+
+    @Override
     public Object save(Object entity) {
         return null;
     }

@@ -21,4 +21,6 @@ public interface OrderProcessingRepo extends JpaRepository {
     boolean upgradeToMembership();
 
     PackingSlip createPackingSlipForVideo(Payment payment, List<Product> productList);
+
+    Product getProductByName(String videoName);
 }
