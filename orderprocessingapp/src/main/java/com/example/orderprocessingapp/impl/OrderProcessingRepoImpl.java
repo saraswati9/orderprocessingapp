@@ -1,5 +1,7 @@
 package com.example.orderprocessingapp.impl;
 
+import com.example.orderprocessingapp.model.PackingSlip;
+import com.example.orderprocessingapp.model.Payment;
 import com.example.orderprocessingapp.repository.OrderProcessingRepo;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Example;
@@ -18,6 +20,16 @@ public class OrderProcessingRepoImpl implements OrderProcessingRepo {
     @Override
     public String createPackingSlip() {
         return "physical product";
+    }
+
+    @Override
+    public PackingSlip createPackingSlip(Payment payment, String productName) {
+        return null;
+    }
+
+    @Override
+    public PackingSlip getPackingSlipById(Long valueOf) {
+        return null;
     }
 
     @Override
